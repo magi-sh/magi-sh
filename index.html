@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="manifest" href="manifest.json" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Magi</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('service-worker.js')
+        .then(registration => {
+          console.log('ServiceWorker registration successful with scope: ', registration.scope);
+        })
+        .catch(error => {
+          console.log('ServiceWorker registration failed:', error);
+        });
+    });
+  }
+</script>
+<div id="login-container" class="login-container">
+    <h2>Login</h2>
+    <form id="login-form">
+        <label for="username">Username:</label><br />
+        <input type="text" id="username" required /><br />
+        <label for="password">Password:</label><br />
+        <input type="password" id="password" required /><br />
+        <button type="submit">Login</button>
+    </form>
+    <p id="login-message"></p>
+</div>
+
+<div id="main-content" style="display:none;">
+    <header>
+         <img src="magi.jpg" alt="My Photo" class="header-photo" />
+        <h1>BAGA NAGAAN GARA MARSARIITII KOOTTI NAGAAN DHUFTAN! ANAA DHUFU JENNEERRA!!</h1>
+        <nav>
+            <a href="#about">Waa'ee Koo</a>
+            <a href="#projects">Pirojektoota</a>
+            <a href="#contact">Quunnamuuf</a>
+            <button id="logout-btn">Logout</button>
+        </nav>
+    </header>
+
+    <section id="about" class="section">
+    <h1>Waa'ee Koo</h1>
+    <p>Akkam jirtu ani maqaan koo Magarsaa shibbiruu Amanuun jedhama</p>
+    <p>kanan dhaladhe Naannoo Oromiyaa, godina H/G/W Aanaa guduruu Ganda Diilalloo barooti</p>
+     <p>kutaa 1-8 mana barumsaa sadarkaa 1ffaa baroottan baradhe</p>
+        <p>Kutaa 9-12 mana barumsaa sadarkaa 2ffaa fi mana barumsaa qophaahina kombolchaattin barabadhe</p>
+        <p>Digirii koo jalqabaas muummee computer science tiin yunivarsitii madda walaabuurran fudhadhe</p>
+    <p>Amma garuu hojjetaa baankii oromyaa sab-quunnamtii irraan hojjedha</p>
+    <p>Waan dubbiftaniif Galatoomaa!!</p>
+</section>
+
+    <section id="projects">
+        <h2>Projectiin koo:</h2>
+        <ul>
+            <li>1: <a href="#">Addunyaan kun garamitti deemaa jirtii?</a></li>
+            <li>2: <a href="#">Nutoo maal fakkaanna addunyaa kana keessatti?</a></li>
+            <li>3: <a href="#"></a>Technologyn bu'aa maalii fidaa jira gara Addunyaatti</li>
+            <li>3: <a href="#"></a>Technologyn dhiibbaa maalii fidaa jira gara Addunyaatti</li>
+        </ul>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form id="contact-form">
+            <label for="name">Name:</label><br />
+            <input type="text" id="name" name="name" required /><br />
+            <label for="email">Email:</label><br />
+            <input type="email" id="email" name="email" required /><br />
+            <label for="message">Message:</label><br />
+            <textarea id="message" name="message" rows="4" required></textarea><br />
+            <button type="submit">Send</button>
+        </form>
+        <p id="form-response"></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Magarsa Shibiru Amenu</p>
+    </footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
