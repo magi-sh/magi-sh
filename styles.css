@@ -1,0 +1,68 @@
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: ##FFFFFF;
+}
+
+header nav {
+  display: flex;
+  justify-content: center; /* centers the items horizontally */
+  align-items: center;    /* centers items vertically if needed */
+  gap: 50px;              /* space between items, adjust as needed */
+  margin: 20px 0;         /* optional margin around nav */
+}
+
+
+header nav button {
+  background: none;
+  border: none;
+  color: blue;
+  cursor: pointer;
+  font-size: 1em;
+  padding: 0 10px;
+}
+
+
+header nav a:hover,
+header nav button:hover {
+  text-decoration: underline;
+}
+.header-photo {
+  width: 200px; 
+  height: auto;
+  margin-right: 15px; 
+  margin-left: 15px; 
+  border-radius: 10%; 
+}
+
+{
+    .header table-layout: ;
+    margin-right: 10px
+    margin-bottom 15;
+}
+#login-form {
+    background: #d3d3d3;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 300px;
+}
+
+
+#login-form input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#login-message {
+    color: red;
+    margin-top: 10px;
+}
